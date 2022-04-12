@@ -6,7 +6,7 @@ Just hello-world.
 3  c  
 4  D  
 5  E  
-6  c  
+6  X  
 7  g  
 8  h  
 9  i  

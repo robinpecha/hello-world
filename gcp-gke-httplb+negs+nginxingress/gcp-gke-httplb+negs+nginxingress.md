@@ -188,7 +188,7 @@ gcloud -q compute health-checks delete app-service-80-health-check
 gcloud -q compute firewall-rules delete $CLUSTER_NAME-lb-fw
 
 
-#havent tryied:
+#havent tried:
 helm uninstall ingress-nginx ingress-nginx/ingress-nginx
 
 # probably not needed:

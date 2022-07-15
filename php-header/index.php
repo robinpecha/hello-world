@@ -18,6 +18,20 @@
 
 <body>
 
+                                                                                                                                                                                                                                     
+    <h2><span id="ip">?</span> = your public IP. </h2>                                                                                                                                                                                   
+    <h2><?php echo file_get_contents('https://ifconfig.me/ip'); ?> = public IP of this server is. </h2>                                                                                                                                  
+    <h2> <?php echo $_SERVER['REMOTE_ADDR'];   ?> = local IP of this server </h2>                                                                                                                                                        
+    <script>                                                                                                                                                                                                                             
+        fetch('https://ifconfig.me/ip')                                                                                                                                                                                                  
+        .then(response => response.text())                                                                                                                                                                                               
+        .then(data => {                                                                                                                                                                                                                  
+            console.log(data);                                                                                                                                                                                                           
+            document.getElementById("ip").innerHTML = (data);                                                                                                                                                                            
+        });                                                                                                                                                                                                                              
+    </script>                                                                                                                                                                                                                            
+   
+
     <h1>get_headers():</h1>
     <?php
 $URL = 'http://zoopla.robinpecha.cz/';

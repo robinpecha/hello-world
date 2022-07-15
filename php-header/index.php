@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShowAllHeaders</title>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <style>
+        .h1,
+        h1 {
+            background-color: lightgray;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
-    
-<h1>get_headers()</h1>
-<?php
+
+    <h1>get_headers():</h1>
+    <?php
 $URL = 'http://zoopla.robinpecha.cz/';
 
 $headers = get_headers($URL);
@@ -20,8 +29,8 @@ foreach($headers as $value) {
 }
 ?>
 
-<h1>$_SERVER</h1>
-<?php
+    <h1>$_SERVER:</h1>
+    <?php
 function get_HTTP_request_headers() {
     $HTTP_headers = array();
     foreach($_SERVER as $key => $value) {
@@ -39,8 +48,8 @@ foreach ($headers as $key => $value) {
 }
 ?>
 
-<h1>apache_request_headers</h1>
-<?php
+    <h1>apache_request_headers:</h1>
+    <?php
 $apache_headers= apache_request_headers();
 
 foreach ($apache_headers as $key => $value) {
@@ -48,12 +57,18 @@ foreach ($apache_headers as $key => $value) {
 }
 ?>
 
-<h1>    getallheaders</h1>
-<?php 
+    <h1> getallheaders:</h1>
+    <?php 
     $headers =  getallheaders();
     foreach($headers as $key=>$val){
     echo $key . ' => ' . $val . ' <br> ';}
 ?>
 
+    <h1>Access log:</h1>
+    <pre>
+<?php include("/var/log/apache2/access.log");  ?>
+</pre>
+
 </body>
+
 </html>

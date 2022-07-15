@@ -178,7 +178,7 @@ And press Apply policy to new target, there is only one available there.
 
 ### Then you can test CA:
 ```
-# switch default rule to deny - after some time you should not be able to acces websate
+# switch default rule to deny - after some time you should not be able to acces website
 gcloud compute security-policies rules update 2147483647 --security-policy cloudarmor --action "deny-403"
 # switch default rule back to allow - after some time ..
 gcloud compute security-policies rules update 2147483647 --security-policy cloudarmor --action "allow"

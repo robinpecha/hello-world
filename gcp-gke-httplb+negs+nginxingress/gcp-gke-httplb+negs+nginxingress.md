@@ -167,10 +167,11 @@ curl -s -I http://$IP_ADDRESS/
 curl -s -I http://35.186.237.180/
 ```
 # To be done
-We still need public ip on nginx, for scraping protection tools etc. We can use something like this:
-https://geko.cloud/en/forward-real-ip-to-a-nginx-behind-a-gcp-load-balancer/
+- We still need public ip on nginx, for scraping protection tools etc. We can use something like this:
+https://geko.cloud/en/forward-real-ip-to-a-nginx-behind-a-gcp-load-balancer/ .
 So we need implement ngx_http_realip_module first. https://nginx.org/en/docs/http/ngx_http_realip_module.html
-
+- try negs in multizonal env
+- adapt it to our terraform config
 ---
 # CLEANUP
 ```

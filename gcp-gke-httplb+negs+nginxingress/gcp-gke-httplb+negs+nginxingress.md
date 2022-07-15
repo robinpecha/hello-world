@@ -166,6 +166,24 @@ IP_ADDRESS=$(gcloud compute forwarding-rules describe $CLUSTER_NAME-forwarding-r
 curl -s -I http://$IP_ADDRESS/
 curl -s -I http://35.186.237.180/
 ```
+### Cloud Armor
+```
+gcloud compute security-policies create cloudarmor
+```
+Currently I didn't have time to automate cloudarmor connection to the backend, so you have to do it manualy. 
+(Google Cloud > Network Security > Cloud Armor > policy: cloudarmor > targets > Apply policy to new target > asign lb )
+Or just open url:
+https://console.cloud.google.com/net-security/securitypolicies/details/cloudarmor?project=robin-test-project-349009&tab=targets
+And press Apply policy to new target, there is only one available there.
+
+### Then you can test CA:
+```
+# switch default rule to deny - after some time you should not be able to acces websate
+gcloud compute security-policies rules update 2147483647 --security-policy cloudarmor --action "deny-403"
+# switch default rule back to allow - after some time ..
+gcloud compute security-policies rules update 2147483647 --security-policy cloudarmor --action "allow"
+```
+
 # To be done
 - We still need public ip on nginx, for scraping protection tools etc. We can use something like this:
 https://geko.cloud/en/forward-real-ip-to-a-nginx-behind-a-gcp-load-balancer/ .

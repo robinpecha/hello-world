@@ -18,11 +18,11 @@
 
 <body>
 
-
-    <h2><?php echo gethostname(); ?> = hostname of this server is. </h2>
-    <h2><span id="ip">?</span> = your public IP. </h2>
-    <h2><?php echo file_get_contents('https://ifconfig.me/ip'); ?> = public IP of this server is. </h2>
+    <h1>MULTIZONAL CLUSTER</h1>
+    <h2><?php echo gethostname(); ?> = hostname of this server </h2>
     <h2> <?php echo $_SERVER['REMOTE_ADDR'];   ?> = local IP of this server </h2>
+    <h2><?php echo file_get_contents('https://ifconfig.me/ip'); ?> = public IP of this server</h2>
+    <h2><span id="ip">?</span> = your public IP</h2>
     <script>
         fetch('https://ifconfig.me/ip')
             .then(response => response.text())

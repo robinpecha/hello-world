@@ -1,4 +1,4 @@
 # hello-world
 Just hello-world.
-MAIN BRANCH
+MAIN BRANCH is main
 

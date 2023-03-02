@@ -1,5 +1,6 @@
 git fetch --all
 git pull --all
+git pull
 
 git fetch
 git branch -r #list branches

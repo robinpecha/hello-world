@@ -23,3 +23,8 @@ git fetch origin
 git reset --hard origin/main
 git clean -f -d
 
+
+git sync
+
+
+

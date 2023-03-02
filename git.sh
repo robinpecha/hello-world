@@ -11,3 +11,10 @@ git branch -d localBranchName # delete branch locally
 git push origin --delete remoteBranchName # delete branch remotely
 
 git config --get remote.origin.fetch
+
+for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master`; do
+    git branch --track ${branch##*/} $branch
+done
+
+git fetch --all
+git pull --all

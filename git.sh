@@ -11,5 +11,6 @@ git fetch --all ;
 git fetch origin side:side
 git fetch origin third:third
 
+git fetch origin sandbox:sandbox ; git fetch origin production:production ; git fetch origin staging:staging
 
 

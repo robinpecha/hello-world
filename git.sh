@@ -24,7 +24,8 @@ git reset --hard origin/main
 git clean -f -d
 
 
-git sync
+git sync 
+git sync 
 
 
 

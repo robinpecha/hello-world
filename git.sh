@@ -18,3 +18,8 @@ done
 
 git fetch --all
 git pull --all
+
+git fetch origin
+git reset --hard origin/master
+git clean -f -d
+

@@ -20,6 +20,6 @@ git fetch --all
 git pull --all
 
 git fetch origin
-git reset --hard origin/master
+git reset --hard origin/main
 git clean -f -d
 

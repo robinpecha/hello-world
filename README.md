@@ -12,8 +12,7 @@ git push
 
 # add-commit-push
 
-git add -A ; 
-git commit -a -m "etwas" ; git push
+git add -A ; git commit -a -m "etwas" ; git push
 
 # credentials
 

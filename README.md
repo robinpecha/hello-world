@@ -6,7 +6,7 @@ git add -A
 git commit -m "commit message"
 git push
 
-git commit -a -m "etwas" ; git push
+git add -A ; git commit -a -m "etwas" ; git push
 
 
 
